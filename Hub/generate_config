@@ -5,6 +5,8 @@ cat <<_EOF
   "host": null,
   "port": 4444,
   "role": "hub",
+  "multiWindow": "true",
+  "browserSessionReuse": "true",
   "maxSession": $GRID_MAX_SESSION,
   "newSessionWaitTimeout": $GRID_NEW_SESSION_WAIT_TIMEOUT,
   "capabilityMatcher": "org.openqa.grid.internal.utils.DefaultCapabilityMatcher",

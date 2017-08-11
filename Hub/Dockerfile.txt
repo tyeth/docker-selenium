@@ -31,5 +31,12 @@ COPY generate_config \
 # To run a command as administrator (user "root"), use "sudo <command>". See "man sudo_root" for details.
 # When logging into the container
 RUN /opt/bin/generate_config > /opt/selenium/config.json
-
+#RUN echo 127.0.0.1 web-local.vscreen.org > /etc/hosts
+#RUN echo 127.0.0.1 advertising-ea-local.vscreen.org > /etc/hosts
+#RUN echo 127.0.0.1 webshare-local.vscreen.org > /etc/hosts
+#RUN echo 127.0.0.1 reporting-local.vscreen.org > /etc/hosts
+#RUN echo 127.0.0.1 api-vdoc-local.vscreen.org > /etc/hosts
+#RUN echo 127.0.0.1 socius.viz.com.dev > /etc/hosts
+#RUN echo 127.0.0.1	web-local.vdoc.org > /etc/hosts
+#RUN echo 127.0.0.1	vdoc.web-local.vscreen.org > /etc/hosts
 CMD ["/opt/bin/entry_point.sh"]
