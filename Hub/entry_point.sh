@@ -5,7 +5,7 @@ CONF=$ROOT/config.json
 
 /opt/bin/generate_config >$CONF
 
-echo "starting selenium hub with configuration:"
+echo "starting selenium hub v3.50 with configuration:"
 cat $CONF
 
 if [ ! -z "$SE_OPTS" ]; then
@@ -19,7 +19,7 @@ function shutdown {
     echo "shutdown complete"
 }
 
-java ${JAVA_OPTS} -jar /opt/selenium/selenium-server-standalone.jar \
+java ${JAVA_OPTS} -jar /opt/bin/selenium-server-3-50-git-build.jar \
   -role hub \
   -hubConfig $CONF \
   ${SE_OPTS} &

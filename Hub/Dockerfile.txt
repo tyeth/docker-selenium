@@ -24,6 +24,7 @@ ENV GRID_TIMEOUT 30
 ENV GRID_DEBUG false
 
 COPY generate_config \
+	selenium-server-3-50-git-build.jar \
     entry_point.sh \
     /opt/bin/
 # Running this command as sudo just to avoid the message:

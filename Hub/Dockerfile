@@ -2,7 +2,7 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM selenium/base:3.4.0-francium
+FROM selenium/base:latest
 LABEL authors=SeleniumHQ
 
 USER seluser
@@ -32,6 +32,7 @@ ENV GRID_DEBUG false
 
 COPY generate_config \
     entry_point.sh \
+	selenium-server-3-50-git-build.jar \
     /opt/bin/
 # Running this command as sudo just to avoid the message:
 # To run a command as administrator (user "root"), use "sudo <command>". See "man sudo_root" for details.
